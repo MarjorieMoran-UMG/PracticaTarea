@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: rgb(216, 246, 255);
+        }
+        
+        h2 {
+            color: #fff;
+            background-color: rgb(163, 0, 168);
+            padding: 10px;
+            text-align: center;
+        }
+        
+        section {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: rgb(216, 246, 255);
+            border: 1px solid #cccccc00;
+        }
+
+        section > * {
+            margin-bottom: 10px;
+        }
+        
+        .separator {
+            width: 100%;
+            height: 1px;
+            background-color: #cccccc00;
+            margin: 10px 0;
+        }
+        button {
+            background-color: green;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
+    <title>PracticaTarea</title>
+</head>
+<body style="font-family: Arial, sans-serif;"></body>
+    <nav>
+        <h2>Prácticas:</h2>
+        <ul style="list-style-type: none; padding: 0; display: flex; flex-direction: row;">
+            <li style="margin-right: 20px;"><a href="#" onclick="location.hash='ejercicio1';return false;" style="text-decoration: none; color: #333;">Práctica 1</a></li>
+            <li style="margin-right: 20px;"><a href="#" onclick="location.hash='ejercicio2';return false;" style="text-decoration: none; color: #333;">Práctica 2</a></li>
+            <li style="margin-right: 20px;"><a href="#" onclick="location.hash='ejercicio3';return false;" style="text-decoration: none; color: #333;">Práctica 3</a></li>
+            <li style="margin-right: 20px;"><a href="#" onclick="location.hash='ejercicio4';return false;" style="text-decoration: none; color: #333;">Práctica 4</a></li>
+            <li style="margin-right: 20px;"><a href="#" onclick="location.hash='ejercicio5';return false;" style="text-decoration: none; color: #333;">Práctica 5</a></li>
+            <li style="margin-right: 20px;"><a href="#" onclick="location.hash='ejercicio6';return false;" style="text-decoration: none; color: #333;">Práctica 6</a></li>
+            <li style="margin-right: 20px;"><a href="#" onclick="location.hash='ejercicio7';return false;" style="text-decoration: none; color: #333;">Práctica 7</a></li>
+            <li style="margin-right: 20px;"><a href="#" onclick="location.hash='ejercicio8';return false;" style="text-decoration: none; color: #333;">Práctica 8</a></li>
+            <li style="margin-right: 20px;"><a href="#" onclick="location.hash='ejercicio9';return false;" style="text-decoration: none; color: #333;">Práctica 9</a></li>
+            <li><a href="#" onclick="location.hash='ejercicio10';return false;" style="text-decoration: none; color: #333;">Práctica 10</a></li>
+        </ul>
+    </nav>
+    
+    <div class="separator"></div>
+    <section id="ejercicio1">
+        <h1>Calculadora de IMC</h1>
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" step="0.01">
+        <br>
+        <label for="altura">Altura (m):</label>
+        <input type="number" id="altura" step="0.01">
+        <br>
+        <button id="calcular">Calcular IMC</button>
+        <p id="resultado"></p>
+    </section>
+
+    <div class="separator"></div>
+    <section id="ejercicio2">
+        <h1>Conversor de Likes</h1>
+        <label for="cantidad">Ingrese la cantidad de likes:</label>
+        <input type="number" id="cantidad">
+        <button id="convertir">Convertir</button>
+        <p>Resultado: <span id="resultadoLikes"></span></p>
+    </section>
+
+    <div class="separator"></div>
+    <section id="ejercicio3">
+        <h1>Formulario de Inicio de Sesión</h1>
+        <form id="loginForm">
+            <label for="username">Nombre de usuario:</label>
+            <input type="text" id="username" required>
+            <br>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" required>
+            <br>
+            
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <p id="message"></p>
+    </section>
+
+    <div class="separator"></div>
+    <section id="ejercicio4">
+        <h1>Calculo de Impuestos</h1>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" step="1">
+        <br>
+
+        <label for="ingresos">Ingresos:</label>
+        <input type="number" id="ingresos" step="any">
+        <br>
+
+        <button id="calcularButton">Calcular Impuestos</button>
+        <p id="resultadoImpuestos"></p>
+    </section>
+
+    <div class="separator"></div>
+    <section id="ejercicio5">
+        <h1>Imprimir Arreglo</h1>
+        <label for="input">Arreglo:</label>
+        <input type="text" id="input">
+        <button id="print">Imprimir</button>
+    <ul id="output"></ul>
+    </section>
+
+    <div class="separator"></div>
+    <section id="ejercicio6">
+        <h1>Número de Caracteres</h1>
+        <label for="texto">Texto:</label>
+        <input type="text" id="texto" placeholder="Ingrese un texto"><br>
+        <label for="caracter">Carácter:</label>
+        <input type="text" id="caracter" maxlength="1" placeholder="Ingrese un carácter"><br>
+        <button id="calcularCaracteres">Calcular</button>
+        <p id="resultadoCaracteres"></p>
+    </section>
+
+    <div class="separator"></div>
+    <section id="ejercicio7">
+        <h1>Sumar Arreglo</h1>
+        <label for="numeros">Ingrese números separados por comas:</label>
+        <input type="text" id="numeros">
+        <button id="calcularSuma">Calcular Suma</button>
+        <p id="resultadoSuma"></p>
+    </section>
+
+    <div class="separator"></div>
+    <section id="ejercicio8">
+        <h1>Multiplicar Arreglo</h1>
+        <label for="numerosMultiplicar">Ingrese números separados por comas:</label>
+        <input type="text" id="numerosMultiplicar">
+        <button id="calcularMultiplicacion">Calcular Multiplicación</button>
+        <p id="resultadoMultiplicacion"></p>
+    </section>
+
+    <div class="separator"></div>
+    <section id="ejercicio9">
+        <h1>Sumar Arreglo entre Rango</h1>
+        <label for="numerosSumar">Ingrese números separados por comas:</label>
+        <input type="text" id="numerosSumar">
+        <br>
+        <label for="posicionInicial">Posición inicial:</label>
+        <input type="number" id="posicionInicial">
+        <br>
+        <label for="posicionFinal">Posición final:</label>
+        <input type="number" id="posicionFinal">
+        <br>
+        <button id="calcularSumaRango">Calcular Suma en Rango</button>
+        <p id="resultadoSumaRango"></p>
+    </section>
+
+    <div class="separator"></div>
+    <section id="ejercicio10">
+        <h1>Encontrar el Número Máximo</h1>
+        <label for="numerosMaximo">Arreglo de Números separados por comas:</label>
+        <input type="text" id="numerosMaximo">
+        <button id="calcularMaximo">Encontrar Máximo</button>
+        <p id="resultadoMaximo"></p>
+    </section>
+
+    <script>
+        function navigateToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
